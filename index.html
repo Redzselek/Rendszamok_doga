@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/dark.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="adatok">
+      <h1>Adja meg az autó rendszámát: <input type="text" id="rendszam" /></h1>
+      <h1>
+        Adja meg az üzemanyag típusát
+        <select name="uzemanyag" id="uzemanyag">
+          <option value="benzin">Benzin</option>
+          <option value="disel">Dízel</option>
+          <option value="elektromos">Elektromos</option>
+        </select>
+      </h1>
+      <button onclick="Tarol()">Tárol</button>
+    </div>
+    <br />
+    <div id="tablazat">
+      <table style="width: 70%; text-align: center">
+        <th rowspan="2">Üzemanyag szerint</th>
+        <td>Benzin</td>
+        <td>Dízel</td>
+        <td>Elektromos</td>
+        <tr>
+          <td>1</td>
+          <td>20</td>
+          <td>30</td>
+        </tr>
+        <tr>
+            <th>Első tulajdonosok százalékos aránya</th>
+            <td id="szazalek" colspan="6">120%</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
