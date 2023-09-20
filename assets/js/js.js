@@ -21,6 +21,11 @@ function Statisztika() {
     var disel = 0;
     var elektromos = 0;
     var elsotulajdonosarany = 0;
+    var arany= 0;
+    var regi = 0;
+    var uj = 0;
+    var ajto3 = 0
+    var ajto5 = 0
     for (let i = 0; i < adatok.length; i++) {
         if (adatok[i].uzemanyag == "benzin") {
             benzin++
@@ -36,8 +41,23 @@ function Statisztika() {
         document.getElementById("diselszam").innerHTML = disel
         document.getElementById("elektromosszam").innerHTML = elektromos
         
-        
+        if (adatok[i].elsotulajdonos) {
+            elsotulajdonosarany++
+        }
+        arany = (elsotulajdonosarany/adatok.length)*100
 
+        document.getElementById("szazalek").innerHTML = arany
+
+        if(adatok[i].ajtok3)
+        {
+            ajto3++
+        }
+        else
+        {
+            ajto5++
+        }
+        document.getElementById("regi").innerHTML = ajto3
+        document.getElementById("uj").innerHTML = ajto5
 
     }
 }
