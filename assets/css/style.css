@@ -5,3 +5,8 @@ tr
 {
     border: 5px solid red;
 }
+
+#tablazat
+{
+    display: none;
+}
