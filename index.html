@@ -1,84 +1,84 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/dark.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <div id="adatok">
-      <h1>Adja meg az autó rendszámát: <input type="text" id="rendszam" /></h1>
-      <h1>
-        Adja meg az üzemanyag típusát
-        <select name="uzemanyag" id="uzemanyag">
-          <option value="benzin">Benzin</option>
-          <option value="disel">Dízel</option>
-          <option value="elektromos">Elektromos</option>
-        </select>
-      </h1>
-      <h1>Első tulajdonos?: <input type="checkbox" id="elsotulajdonos"></h1>
-      <h1>
-        Ajtók száma: 
-        <br>
-        <span>
-            3 ajtó
-            <input type="radio" name="ajtok" id="3ajtos">
-        </span> 
-        <br>
-        <span>
-            5 ajtó
-            <input type="radio" name="ajtok" id="5ajtos" checked="true"> 
-        </span>
-    </h1>
-      <button onclick="Tarol()">Tárol</button>
-      <button onclick="Statisztika()">Statisztika</button>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="assets/css/dark.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<div id="adatok">
+			<h1>
+				Adja meg az autó rendszámát: <input type="text" id="rendszam" />
+			</h1>
+			<h1>
+				Adja meg az üzemanyag típusát
+				<select name="uzemanyag" id="uzemanyag">
+					<option value="benzin">Benzin</option>
+					<option value="disel">Dízel</option>
+					<option value="elektromos">Elektromos</option>
+				</select>
+			</h1>
+			<h1>
+				Első tulajdonos?: <input type="checkbox" id="elsotulajdonos" />
+			</h1>
+			<h1>
+				Ajtók száma:
+				<br />
+				<span>
+					3 ajtó
+					<input type="radio" name="ajtok" id="3ajtos" />
+				</span>
+				<br />
+				<span>
+					5 ajtó
+					<input
+						type="radio"
+						name="ajtok"
+						id="5ajtos"
+						checked="true"
+					/>
+				</span>
+			</h1>
+			<button onclick="Tarol()">Tárol</button>
+			<button onclick="Statisztika()">Statisztika</button>
+		</div>
 
-    <br/>
-    <div id="tablazat">
-      <table style="width: 70%; text-align: center">
-        <th rowspan="2">Üzemanyag szerint</th>
-        <td colspan="2">Benzin</td>
-        <td colspan="2">Dízel</td>
-        <td  colspan="2">Elektromos</td>
-        <tr>
-            <td colspan="2" id="benzinszam"></td>
-            <td colspan="2" id="diselszam"></td>
-            <td colspan="2" id="elektromosszam"></td>
-        </tr>
-        <tr>
-            <th>Első tulajdonosok százalékos aránya</th>
-            <td id="szazalek" colspan="6"></td>
-        </tr>
-        <tr>
-            <th>Rendszámok megoszlása</th>
-            <td colspan="3">
-                Régi rendszám
-            </td>
-            <td colspan="3">
-                Új rendszám
-            </td>
-        </tr>
-        <tr>
-            <th rowspan="1"></th>
-            <td colspan="3" id="regirendszam">
-                asdasd
-            </td>
-            <td colspan="3" id="ujrendszam">
-                asdasdasd
-            </td>
-        </tr>
-        <tr>
-            <th>Melyik a népszerűbb?</th>
-            <td colspan="6" id="nepszerubb"></td>
-        </tr>        
-
-      </table>
-    </div>
-  </body>
+		<br />
+		<div id="tablazat">
+			<table style="width: 70%; text-align: center">
+				<th rowspan="2">Üzemanyag szerint</th>
+				<td colspan="2">Benzin</td>
+				<td colspan="2">Dízel</td>
+				<td colspan="2">Elektromos</td>
+				<tr>
+          <td colspan="2" id="benzinszam"></td>
+					<td colspan="2" id="diselszam"></td>
+					<td colspan="2" id="elektromosszam"></td>
+				</tr>
+				<tr>
+					<th>Első tulajdonosok százalékos aránya</th>
+					<td id="szazalek" colspan="6"></td>
+				</tr>
+				<tr>
+					<th>Rendszámok megoszlása</th>
+					<td colspan="3">Régi rendszám</td>
+					<td colspan="3">Új rendszám</td>
+				</tr>
+				<tr>
+					<th rowspan="1"></th>
+					<td colspan="3" id="regirendszam">0</td>
+					<td colspan="3" id="ujrendszam">0</td>
+				</tr>
+				<tr>
+					<th>Melyik a népszerűbb?</th>
+					<td colspan="6" id="nepszerubb"></td>
+				</tr>
+			</table>
+		</div>
+	</body>
 </html>
 
 <script src="assets/js/js.js"></script>

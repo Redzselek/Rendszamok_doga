@@ -1,6 +1,9 @@
-table, th, td {
+table, th, td 
+{
     border : 1px solid white;
-    }
+    border-radius: 5px;
+}
+
 tr
 {
     border: 5px solid red;
@@ -9,4 +12,9 @@ tr
 #tablazat
 {
     display: none;
+}
+
+input
+{
+    border-radius: 5px;
 }

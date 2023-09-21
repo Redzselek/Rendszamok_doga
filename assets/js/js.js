@@ -9,10 +9,6 @@ function Tarol() {
         ajtok5: document.getElementById("5ajtos").checked,
     }
     adatok.push(obj)
-/*     document.getElementById("").value;
-    document.getElementById("").value;
-    document.getElementById("elsotulajdonos").checked = false;
-    document.getElementById("rendszam").focus()   */  
 }
 
 function Statisztika() {
@@ -24,8 +20,8 @@ function Statisztika() {
     var arany= 0;
     var regi = 0;
     var uj = 0;
-    var ajto3 = 0
-    var ajto5 = 0
+    var ajto3 = 0;
+    var ajto5 = 0;
     for (let i = 0; i < adatok.length; i++) {
         if (adatok[i].uzemanyag == "benzin") {
             benzin++
@@ -56,8 +52,22 @@ function Statisztika() {
         {
             ajto5++
         }
-        document.getElementById("regi").innerHTML = ajto3
-        document.getElementById("uj").innerHTML = ajto5
-
+        if (ajto3 < ajto5) {
+            document.getElementById("nepszerubb").innerHTML = "Az 5 ajtós modell "
+        }
+        else{
+            document.getElementById("nepszerubb").innerHTML = "Az 3 ajtós modell "
+        }
+        
+        if (adatok[i].rendszam.length > 6) 
+        {
+            uj++
+        }
+        else
+        {
+            regi++
+        }
+        document.getElementById("regirendszam").innerHTML = regi
+        document.getElementById("ujrendszam").innerHTML = uj
     }
 }
