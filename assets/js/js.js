@@ -59,7 +59,7 @@ function Statisztika() {
             document.getElementById("nepszerubb").innerHTML = "Az 3 ajtós modell "
         }
         
-        if (adatok[i].rendszam.length > 6) 
+        if (adatok[i].rendszam.length > 7) 
         {
             uj++
         }
